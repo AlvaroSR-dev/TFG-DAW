@@ -2,4 +2,19 @@
  
 # Diagrama de Flujo del Proyecto
 
-![diagrama](https://github.com/AlvaroSR-dev/TFG-DAW/assets/73520829/de7e21a2-57c9-4553-995e-06abc1660e5f)
+graph TD;
+    A[Inicio] --> B[Autenticación del Usuario]
+    B -->|Usuario Inicia Sesión| C[Página de Inicio]
+    B -->|Usuario No Autenticado| D[Fin]
+    C --> E[Ver Lista de Cursos]
+    E --> F[Seleccionar Curso]
+    F --> G[Ver Detalles del Curso]
+    G --> H[Ver Ejercicio Actual]
+    H --> I[Introducir Código]
+    I --> J[Enviar Código a API de Gemini AI]
+    J --> K[Recibir Respuesta y Nota]
+    K --> L[Guardar en Firebase Firestore]
+    L --> M{Ejercicio Siguiente Disponible}
+    M -->|Sí| N[Navegar al Siguiente Ejercicio]
+    M -->|No| O[Ejercicio Completo]
+    O --> P[Fin]
