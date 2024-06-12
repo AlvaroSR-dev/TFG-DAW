@@ -15,7 +15,7 @@ H --> I[Introducir Código]
 I --> J[Enviar Código a API de Gemini AI]
 J --> K[Recibir Respuesta y Nota]
 K --> L[Guardar en Firebase Firestore]
-L --> M{Ejercicio Siguiente Disponible}
+L --> M{Ejercicio Siguiente}
 M -->|Sí| N[Navegar al Siguiente Ejercicio]
 M -->|No| O[Ejercicio Completo]
 O --> P[Fin]
